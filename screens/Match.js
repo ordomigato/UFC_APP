@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import { globalStyles } from '../styles/global'
 
-
 const Match = () => {
     return (
         <View style={globalStyles.container}>

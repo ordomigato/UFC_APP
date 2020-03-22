@@ -11,5 +11,11 @@ export const globalStyles = StyleSheet.create({
     paragraph: {
         marginVertical: 8,
         lineHeight: 20,
+    },
+    textInput: {
+        color: '#222',
+        backgroundColor: '#fff',
+        padding: 5,
+        textAlign: 'center'
     }
 })

@@ -2,10 +2,8 @@ import 'react-native-gesture-handler' //MUST BE AT TOP
 import React, { useState } from 'react'
 import { StyleSheet, View, Text, FlatList } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 //Fix for uuid in react-native
@@ -21,7 +19,20 @@ const App = () => {
   return (
     <>
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Navigator initialRouteName="Home"
+          drawerStyle={{
+            backgroundColor: '#222',
+            color: '#fff',
+          }}
+          drawerContentOptions={{
+            activeTintColor: '#fff',
+            inactiveTintColor: '#ccc',
+            itemStyle: {
+              width: '100%',
+              borderRadius: 0,
+            }
+        }}
+        >
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="About" component={About} />
         </Drawer.Navigator>
